@@ -20,7 +20,7 @@ my $mysql_password = 'ey112358mysql';
 my $my_tar = '/bin/tar';
 ## It's default directory for save mysql dump file
 my $admin_base = '/home/mongrel/db_backup';
-my $host = '127.0.0.1';
+my $host = '192.168.2.200';
 my $port = '3306';
 my ($charset,@databases,$date_now);
 
