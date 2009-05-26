@@ -19,7 +19,7 @@ test:
 
 production:
     adapter: mysql
-    database: boxroom_production
+    database: media_production
     host: localhost
     username: root
     password: 
