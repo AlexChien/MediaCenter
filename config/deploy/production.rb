@@ -74,7 +74,7 @@ namespace :deploy do
   # customized tasks
   desc "Backup Mysql"
   task :backup_db, :roles => [:web] do
-  run "#{shared_path}/script/mysql_backup.pl media_production:utf8 #{releases.last} "
+  run "#{release_path}/script/mysql_backup.pl media_production:utf8 #{releases.last} "
   end
  
   desc "Generate Production database.yml"
