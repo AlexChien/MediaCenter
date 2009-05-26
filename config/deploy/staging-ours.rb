@@ -55,14 +55,14 @@ namespace :deploy do
   desc "Generate database.yml and Create asset packages for production, minify and compress js and css files" 
   task :after_update_code, :roles => [:web] do
     database_yml
-    asset_packager
+    # asset_packager
   end
   
   # add soft link script for deploy
   desc "Symlink the upload directories"
   task :after_symlink, :roles => [:web] do
     ## create link for shared assets
-    run "#{release_path}/script/relink.sh #{shared_path}/assets #{release_path}/public/images/assets #{previous_release} #{release_name} assets"
+    run "#{release_path}/script/relink.sh #{shared_path}/uploads #{release_path}/public/images/uploads #{previous_release} #{release_name} assets"
     ## create link for mongrel cluster 
     
     backup_db
@@ -72,7 +72,7 @@ namespace :deploy do
   # customized tasks
   desc "Backup Mysql"
   task :backup_db, :roles => [:web] do
-  run "#{shared_path}/script/mysql_backup.pl enjoyoung_staging:utf8 #{releases.last} "
+  run "#{shared_path}/script/mysql_backup.pl media_staging:utf8 #{releases.last} "
   end
  
   desc "Generate Production database.yml"

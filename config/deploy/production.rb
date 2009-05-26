@@ -57,7 +57,7 @@ namespace :deploy do
   desc "Generate database.yml and Create asset packages for production, minify and compress js and css files" 
   task :after_update_code, :roles => [:web] do
     database_yml
-    asset_packager
+    # asset_packager
   end
   
   # add soft link script for deploy
