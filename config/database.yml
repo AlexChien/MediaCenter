@@ -19,7 +19,7 @@ test:
 
 production:
     adapter: mysql
-    database: media_production
+    database: media_development
     host: localhost
     username: root
     password: 

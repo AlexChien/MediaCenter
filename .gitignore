@@ -1,5 +1,5 @@
 index/*
-tmp/*
-log/*
+tmp/**/*
+log/*.log
 db/*.sqlite3
 uploads/*
