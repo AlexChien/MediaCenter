@@ -48,6 +48,7 @@ class UserController < ApplicationController
           else
             flash[:user_error] = e.message + ".<br /><br />或者用户邮箱错误，或者邮件设置错误。"
           end
+          # logger.warn "Email sent failed: #{e.message}"
           redirect_to :action => 'list'
         end
       else

@@ -28,15 +28,15 @@ config.action_view.cache_template_loading            = true
 # config.threadsafe!
 
 # Email Configuration
-config.action_mailer.delivery_method = :smtp
-config.action_mailer.smtp_settings = {
-  :address => "mail.enjoyoung.cn",
-  :port => 25,
-  :domain => "mail.enjoyoung.cn",
-  :authentication => :login,
-  :user_name => "enjoyoung_mailer@enjoyoung.cn",
-  :password => "1q!2w@3e#"
-}
+# config.action_mailer.delivery_method = :smtp
+# config.action_mailer.smtp_settings = {
+#   :address => "mail.enjoyoung.cn",
+#   :port => 25,
+#   :domain => "mail.enjoyoung.cn",
+#   :authentication => :login,
+#   :user_name => "enjoyoung_mailer@enjoyoung.cn",
+#   :password => "1q!2w@3e#"
+# }
 
 config.action_mailer.perform_deliveries = true
 # Don't care if the mailer can't send

@@ -48,9 +48,12 @@ end
 ActionMailer::Base.delivery_method = :smtp
 
 ActionMailer::Base.smtp_settings = {
-  :address => 'bogus',
+  :address => "mail.enjoyoung.cn",
   :port => 25,
-  :domain => 'bogus'
+  :domain => "mail.enjoyoung.cn",
+  :authentication => :login,
+  :user_name => "enjoyoung_mailer@enjoyoung.cn",
+  :password => "1q!2w@3e#"
 }
 
 # Path where the files will be stored
