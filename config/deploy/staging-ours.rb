@@ -1,4 +1,4 @@
-set :application, "enjoyoung"
+set :application, "media"
 set :deploy_to, "/usr/local/webservice/htdocs/#{application}"
 #set :use_sudo, true
 set :use_sudo, false
@@ -18,7 +18,7 @@ set :scm_verbose, true
 set :branch, "master"
 #set :scm_user, 'alexchien'
 #set :scm_passphrase, "alexgem"
-set :repository,  "git@github.com:AlexChien/enjoyoung.git"
+set :repository,  "git@github.com:AlexChien/MediaCenter.git"
 set :deploy_via, :remote_cache
 
 
