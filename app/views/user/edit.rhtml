@@ -1,0 +1,14 @@
+<p class="title">更新用户资料</p>
+
+<% if flash[:user_confirmation] %>
+<div id="confirmation"><%= flash[:user_confirmation] %></div>
+<% end %>
+
+<% form_tag :action => 'update', :id => @user do %>
+    <%= render :partial=>'form' %>
+    <%= submit_tag '保存更新' %>
+<% end %>
+
+<% if @user != @logged_in_user %>
+<%= link_to '返回', :action => 'list' %>
+<% end %>

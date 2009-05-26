@@ -1,0 +1,8 @@
+<p class="title">新文件夹</p>
+
+<% form_tag :action => 'create', :id => controller.folder_id do %>
+    <%= render :partial=>'form' %>
+    <%= submit_tag '创建' %>
+<% end %>
+
+<%= link_to '返回', :action => 'list', :id => controller.folder_id %>

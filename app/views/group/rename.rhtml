@@ -1,0 +1,8 @@
+<p class="title">重命名组</p>
+
+<% form_tag :action => 'update', :id => @group do %>
+    <%= render :partial=>'form' %>
+    <%= submit_tag '重命名' %>
+<% end %>
+
+<%= link_to '返回', :action => 'list' %>

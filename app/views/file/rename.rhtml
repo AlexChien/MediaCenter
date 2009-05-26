@@ -1,0 +1,11 @@
+<p class="title">重命名文件</p>
+
+<% form_tag :action => 'update', :id => @myfile do %>
+    <%= myfile_to_file(error_messages_for('myfile')) %>
+    <label for="myfile_filename">Name:</label><br />
+    <%= text_field 'myfile', 'filename'  %><br />
+    <br />
+    <%= submit_tag '重命名' %>
+<% end %>
+
+<%= link_to '返回', :controller => 'folder', :action => 'list', :id => controller.folder_id %>

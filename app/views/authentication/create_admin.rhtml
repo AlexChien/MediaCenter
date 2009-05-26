@@ -1,0 +1,28 @@
+<p class="title">创建管理员帐号</p>
+
+<%= name_to_username(error_messages_for('user')) %>
+
+<p>
+    尚无管理员帐号<br/>
+    <br/>
+    在此创建:
+</p>
+<% form_tag do %>
+    <label for="user_name">用户名</label><br />
+    <%= text_field 'user', 'name' %><br />
+    <br />
+
+    <label for="user_email">电子邮件</label><br />
+    <%= text_field 'user', 'email' %><br />
+    <br />
+
+    <label for="user_password">密码</label><br />
+    <%= password_field 'user', 'password' %><br />
+    <br />
+
+    <label for="user_password_confirmation">确认密码</label><br />
+    <%= password_field 'user', 'password_confirmation' %><br />
+    <br />
+
+    <%= submit_tag '创建管理员帐号' %>
+<% end %>

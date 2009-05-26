@@ -1,0 +1,11 @@
+<p class="title">创建新组</p>
+
+<% form_tag :action => 'create' do %>
+    <%= render :partial=>'form' %>
+    <%= check_box('permission_to_everything', 'checked', {}, 'yes', 'no') %> 赋予该组访问现有所有文件夹的权限<br />
+    <font style="font-size:10px;">(默认情况下, 新创建的组对现有目录无访问权限)</font><br />
+    <br /> 
+    <%= submit_tag '创建组' %>
+<% end %>
+
+<%= link_to '返回', :action => 'list' %>

@@ -1,0 +1,22 @@
+<p class="title">登陆</p>
+
+<% if flash[:login_error] %>
+<div id="error"><%= flash[:login_error] %></div>
+<% end %>
+
+<% if flash[:login_confirmation] %>
+<div id="confirmation"><%= flash[:login_confirmation] %></div>
+<% end %>
+
+<% form_tag do %>
+    用户名:<br />
+    <%= text_field 'user', 'name',:style => 'width:220px;' %><br />
+    <br />
+    密码:<br />
+    <%= password_field 'login', 'password', :style => 'width:220px;' %><br />
+    <br />
+    <%= submit_tag '登 陆' %>
+<% end %>
+
+
+<%= link_to '我忘记了密码', :action => 'forgot_password' %>

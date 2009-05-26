@@ -1,0 +1,4 @@
+<% unless controller.folder_id.blank? or not @logged_in_user.can_create(controller.folder_id) %>
+    <%= link_to '创建文件夹', { :controller => 'folder', :action => 'new', :id => controller.folder_id } %><br />
+    <%= link_to '上传文件', { :controller => 'file', :action => 'upload', :id => controller.folder_id } %>
+<% end %>
