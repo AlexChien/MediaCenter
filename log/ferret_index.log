@@ -47,3 +47,7 @@ reindexing model Folder
 reindex model Folder : 100.00% complete : 0.01 secs to finish
 LocalIndex: ensure_index_exists at /Users/AChien/rails/boxroom/index/development/folder
 LocalIndex: ensure_index_exists at /Users/AChien/rails/boxroom/index/development/myfile
+LocalIndex: ensure_index_exists at /Users/AChien/rails/boxroom/index/development/folder
+LocalIndex: ensure_index_exists at /Users/AChien/rails/boxroom/index/development/folder
+LocalIndex: ensure_index_exists at /Users/AChien/rails/boxroom/index/development/myfile
+LocalIndex: ensure_index_exists at /Users/AChien/rails/boxroom/index/development/myfile

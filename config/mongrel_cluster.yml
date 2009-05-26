@@ -1,0 +1,10 @@
+--- 
+address: 127.0.0.1
+user: mongrel
+group: service
+cwd: /usr/local/webservice/htdocs/media/current
+log_file: log/mongrel.log
+port: "3100"
+environment: production
+pid_file: tmp/pids/mongrel.pid
+servers: 2
