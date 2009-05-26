@@ -1,7 +1,7 @@
 --- 
 address: 127.0.0.1
 user: mongrel
-group: service
+group: mongrel
 cwd: /usr/local/webservice/htdocs/media/current
 log_file: log/mongrel.log
 port: "3100"

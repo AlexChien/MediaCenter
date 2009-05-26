@@ -38,6 +38,10 @@ Rails::Initializer.run do |config|
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
+  
+  
+  # We need acts_as_ferret
+  require 'acts_as_ferret'
 end
 
 # ActionMailer config:
@@ -55,8 +59,6 @@ UPLOAD_PATH = "#{RAILS_ROOT}/uploads"
 # Use upload progress (or not)
 USE_UPLOAD_PROGRESS = false
 
-# We need acts_as_ferret
-require 'acts_as_ferret'
 
 # Define the helpers that extract the plain-text to be indexed
 INDEX_HELPERS = [ # defines helpers
