@@ -8,6 +8,7 @@
 # [#update]            updates the name of a file
 # [#destroy]           delete files
 # [#preview]           preview file; possibly with highlighted search words
+require 'iconv'
 class FileController < ApplicationController
   skip_before_filter :authorize, :only => :progress
 
@@ -29,9 +30,10 @@ class FileController < ApplicationController
     usage.download_date_time = Time.now
     usage.user = @logged_in_user
     usage.myfile = @myfile
-
+    ic = Iconv.new("gbk", "utf-8")
+    @change_name = ic.iconv(@myfile.filename)
     if usage.save
-      send_file @myfile.path, :filename => @myfile.filename
+      send_file @myfile.path, :filename => @change_name
     end
   end
 
@@ -64,7 +66,7 @@ class FileController < ApplicationController
 
     # change the filename if it already exists
     if USE_UPLOAD_PROGRESS and not Myfile.find_by_filename_and_folder_id(@myfile.filename, folder_id).blank?
-      @myfile.filename = @myfile.filename + ' (' + Time.now.strftime('%Y%m%d%H%M%S') + ')' 
+      @myfile.filename = @myfile.filename + ' (' + Time.now.strftime('%Y%m%d%H%M%S') + ')'
     end
 
     if @myfile.save
